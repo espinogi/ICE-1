@@ -33,7 +33,9 @@ public class CardTrick {
         System.out.println("Pick a card suit (Diamonds, Spades, Clubs, Hearts): ");
         String userSuit = scan.next();
 
-        Card = luckyCard = new Card(4, "Diamonds"); // lucky card 
+        Card luckyCard = new Card();
+        luckyCard.setValue(4);
+        luckdyCard.setSuit("Diamonds");
         
         Card userCard = new Card();
         userCard.setValue(userValue);
@@ -41,17 +43,17 @@ public class CardTrick {
         
         boolean found = false;
         for (Card card : magicHand) {
-            if(card.equals(userCard)) {
+            if(card.equals(luckyCard)) {
                 found = true;
                 break;
             }
         }
         
         if(found) {
-            System.out.println("Your card was in the magic hand! You win!");
+            System.out.println("The lucky card was in the magic hand! You win!");
             
         } else {
-            System.out.println("Your card was not in the magic hand! You lose.");
+            System.out.println("The lucky card was not in the magic hand! You lose.");
         }
         scan.close();
     }
