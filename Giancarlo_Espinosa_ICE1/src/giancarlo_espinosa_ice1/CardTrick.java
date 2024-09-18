@@ -55,10 +55,12 @@ public class CardTrick {
 
         // Message if the user's card matches the lucky card
         if(found) {
+            System.out.println("Lucky Card" + luckyCard);
             System.out.println("The lucky card was in the magic hand! You win!");
 
         // Message if the user's card doesn't match the lucky card
         } else {
+            System.out.println("Lucky Card" + luckyCard);
             System.out.println("The lucky card was not in the magic hand! You lose.");
         }
         scan.close();
