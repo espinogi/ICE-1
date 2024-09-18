@@ -39,7 +39,7 @@ public class CardTrick {
             luckyCard.setValue(4);
             luckdyCard.setSuit("Diamonds");
 
-        // Getting the users card value and suit
+        // Getting the user's card value and suit
         Card userCard = new Card();
             userCard.setValue(userValue);
             userCard.setSuit(userSuit);
