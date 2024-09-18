@@ -32,6 +32,8 @@ public class CardTrick {
         int userValue = scan.nextInt();
         System.out.println("Pick a card suit (Diamonds, Spades, Clubs, Hearts): ");
         String userSuit = scan.next();
+
+        Card = luckyCard = new Card(4, "Diamonds"); // lucky card 
         
         Card userCard = new Card();
         userCard.setValue(userValue);
