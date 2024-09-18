@@ -10,6 +10,7 @@ package giancarlo_espinosa_ice1;
  */
 
 import java.util.Random;
+import java.util.Scanner;
 
 public class CardTrick {
     
@@ -26,9 +27,30 @@ public class CardTrick {
             magicHand[i] = c;
         }
 
-        System.out.println("Magic Hand: ");
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Pick a card value (1-13): ");
+        int userValue = scan.nextInt();
+        System.out.println("Pick a card suit (Diamonds, Spades, Clubs, Hearts): ");
+        String userSuit = scan.next();
+        
+        Card userCard = new Card();
+        userCard.setValue(userValue);
+        userCard.setSuit(userSuit);
+        
+        boolean found = false;
         for (Card card : magicHand) {
-            System.out.println(card);
+            if(card.equals(userCard)) {
+                found = true;
+                break;
+            }
         }
+        
+        if(found) {
+            System.out.println("Your card was in the magic hand! You win!");
+            
+        } else {
+            System.out.println("Your card was not in the magic hand! You lose.");
+        }
+        scan.close();
     }
 }
